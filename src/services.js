@@ -53,3 +53,11 @@ export function diaSemana(dia){
     return msg;
     
 }
+
+export function fatorial(n){
+    let num = 1;
+    for(let i = 1; i <= n ; i++){
+        num *= i;
+    } 
+    return num;
+}  

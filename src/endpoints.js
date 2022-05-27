@@ -1,4 +1,4 @@
-import {semaforo, diaSemana} from './services.js'
+import {semaforo, diaSemana, fatorial} from './services.js'
 import {Router} from 'express'
 
 const server = Router();
@@ -20,6 +20,15 @@ server.get('/semaforo/:cor', (req, resp) =>{
 
     resp.send({
         semaforo:x
+    })
+})
+
+server.get('/fatorial', (req, resp) =>{
+    let n = req.query.n;
+    let x = fatorial(n);
+
+    resp.send({
+        fatorial: x
     })
 })
 
